@@ -1,3 +1,14 @@
+import { buildAuthorizeEndpointAndRedirect } from './services/auth';
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  const handleClick = () => {
+    buildAuthorizeEndpointAndRedirect();
+  };
+
+  return (
+    <>
+      <h1>Hello!</h1>
+      <button onClick={handleClick}>Sign in with Procore</button>
+    </>
+  );
 }
