@@ -2,9 +2,18 @@ import { useEffect } from 'react';
 import { buildAuthorizeEndpointAndRedirect } from './services/auth';
 
 export default function App() {
-  useEffect(() => {
-    buildAuthorizeEndpointAndRedirect();
-  }, []);
+  // useEffect(() => {
+  //   buildAuthorizeEndpointAndRedirect();
+  // }, []);
 
-  return <h1>Hello Procore!</h1>;
+  const handleClick = () => {
+    buildAuthorizeEndpointAndRedirect();
+  };
+
+  return (
+    <>
+      <h1>Hello!</h1>
+      <button onClick={handleClick}>Sign in with Procore</button>
+    </>
+  );
 }
