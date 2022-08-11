@@ -1,11 +1,6 @@
-import { useEffect } from 'react';
 import { buildAuthorizeEndpointAndRedirect } from './services/auth';
 
 export default function App() {
-  // useEffect(() => {
-  //   buildAuthorizeEndpointAndRedirect();
-  // }, []);
-
   const handleClick = () => {
     buildAuthorizeEndpointAndRedirect();
   };
